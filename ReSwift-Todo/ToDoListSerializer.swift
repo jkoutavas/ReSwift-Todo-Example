@@ -34,8 +34,8 @@ enum SerializationError: Error {
 class ToDoListSerializer {
 
     init() { }
-
-    lazy var dateConverter: DateConverter = DateConverter()
+    
+    lazy var toDoSerializer = ToDoSerializer()
 
     func data(toDoList: ToDoList, encoding: String.Encoding = String.Encoding.utf8) -> Data? {
 
@@ -47,34 +47,13 @@ class ToDoListSerializer {
         guard !toDoList.isEmpty else { return "" }
 
         let title = toDoList.title.map { $0.appended(":") } ?? ""
-        let items = toDoList.items.map(itemRepresentation)
+        let items = toDoList.items.map(toDoSerializer.itemRepresentation)
 
         let lines = [title]
             .appendedContentsOf(items)
             .filter({ !$0.isEmpty }) // Remove empty title lines
 
         return lines.joined(separator: "\n").appended("\n")
-    }
-
-    fileprivate func itemRepresentation(_ item: ToDo) -> String {
-
-        let body = "- \(item.title)"
-        let tags = item.tags.sorted().map { "@\($0)" }
-        let done: String? = {
-            switch item.completion {
-            case .unfinished: return nil
-            case .finished(when: let date):
-                guard let date = date else { return "@done" }
-
-                let dateString = dateConverter.string(date: date)
-                return "@done(\(dateString))"
-            }
-        }()
-
-        return [body]
-            .appendedContentsOf(tags)
-            .appendedContentsOf([done].compactMap(identity)) // remove nil
-            .joined(separator: " ")
     }
 }
 
