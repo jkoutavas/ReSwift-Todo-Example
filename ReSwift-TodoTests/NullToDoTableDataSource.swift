@@ -10,7 +10,9 @@ import Cocoa
 @testable import ReSwiftTodo
 
 class NullToDoTableDataSource: ToDoTableDataSourceType {
-
+    func setStore(toDoListStore: ToDoListStore?) {
+    }
+    
     var tableDataSource: NSTableViewDataSource { return NullTableViewDataSource() }
 
     var selectedRow: Int? { return nil }
