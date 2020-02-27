@@ -6,6 +6,8 @@
 //  Copyright © 2016 ReSwift. All rights reserved.
 //
 
+import Foundation
+
 struct ToDoList {
 
     static var empty: ToDoList { return ToDoList(title: nil, items: []) }
@@ -39,6 +41,10 @@ struct ToDoList {
         }
     }
 
+    mutating func moveItems(from: IndexSet, to: Int) {
+        items.move(from: from, to: to)
+    }
+    
     func indexOf(toDoID: ToDoID) -> Int? {
 
         return items.firstIndex(where: { $0.toDoID == toDoID })

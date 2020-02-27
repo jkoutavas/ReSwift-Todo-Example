@@ -23,6 +23,7 @@ protocol ToDoTableDataSourceType {
     var toDoCount: Int { get }
 
     func updateContents(toDoListViewModel viewModel: ToDoListViewModel)
+    func setStore(toDoListStore: ToDoListStore?)
     func toDoCellView(tableView: NSTableView, row: Int, owner: AnyObject) -> ToDoCellView?
 }
 
@@ -64,6 +65,7 @@ class ToDoListWindowController: NSWindowController {
 
         didSet {
             keyboardEventHandler?.store = store
+            dataSource.setStore(toDoListStore: store)
         }
     }
 
@@ -86,6 +88,7 @@ class ToDoListWindowController: NSWindowController {
 
         tableView.dataSource = self.dataSource.tableDataSource
         tableView.delegate = self
+        tableView.registerForDraggedTypes([.todo, .tableViewIndex])
 
         keyboardEventHandler?.dataSource = self.dataSource
         keyboardEventHandler?.store = self.store
@@ -192,6 +195,12 @@ extension ToDoListWindowController: NSTableViewDelegate {
         }()
 
         dispatchAction(action)
+    }
+    
+    // Due to a bug with NSTableView, this method has to be implemented to get
+    // the draggingDestinationFeedbackStyle.gap animation to look right.
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 30
     }
 }
 

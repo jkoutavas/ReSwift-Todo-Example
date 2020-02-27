@@ -104,3 +104,26 @@ struct RemoveTaskAction: UndoableAction, ToDoListAction {
         return InsertTaskAction(toDo: removingToDo.toDo, index: removingToDo.index)
     }
 }
+
+struct MoveTaskAction: UndoableAction, ToDoListAction {
+    let from: IndexSet
+    let to: Int
+    
+    init(from: IndexSet, to: Int) {
+        self.from = from
+        self.to = to
+    }
+    
+    func apply(oldToDoList: ToDoList) -> ToDoList {
+        var result = oldToDoList
+        result.moveItems(from: from, to: to)
+        return result
+    }
+    
+    var name: String { return "Move Task" }
+    var isUndoable: Bool { return true }
+    
+    func inverse(context: UndoActionContext) -> UndoableAction? {
+        return nil
+    }
+}

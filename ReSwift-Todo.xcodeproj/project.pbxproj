@@ -71,7 +71,9 @@
 		507347901D7FFE8B00ACFD0D /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073478F1D7FFE8B00ACFD0D /* StreamReader.swift */; };
 		507347921D7FFFBD00ACFD0D /* ErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507347911D7FFFBD00ACFD0D /* ErrorHelpers.swift */; };
 		507347941D8001A200ACFD0D /* String+ReSwiftTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507347931D8001A200ACFD0D /* String+ReSwiftTodo.swift */; };
+		6972332A240708A500E91FBA /* ToDoPasteboardWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697233282407084100E91FBA /* ToDoPasteboardWriter.swift */; };
 		6972332C24070EDE00E91FBA /* ToDoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972332B24070EDE00E91FBA /* ToDoSerializer.swift */; };
+		6972332E2407679800E91FBA /* ArrayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972332D2407679800E91FBA /* ArrayUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +167,9 @@
 		5073478F1D7FFE8B00ACFD0D /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		507347911D7FFFBD00ACFD0D /* ErrorHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHelpers.swift; sourceTree = "<group>"; };
 		507347931D8001A200ACFD0D /* String+ReSwiftTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "String+ReSwiftTodo.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		697233282407084100E91FBA /* ToDoPasteboardWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoPasteboardWriter.swift; path = "ReSwift-Todo/ToDoPasteboardWriter.swift"; sourceTree = SOURCE_ROOT; };
 		6972332B24070EDE00E91FBA /* ToDoSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSerializer.swift; sourceTree = "<group>"; };
+		6972332D2407679800E91FBA /* ArrayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 		502C04811D880C310032B7F3 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				6972332D2407679800E91FBA /* ArrayUtil.swift */,
 				504CDFE21D8A6F2D00D16314 /* UndoCommand.swift */,
 				502C047E1D880C150032B7F3 /* Time */,
 				50703B4C1D7F13DE001DAF45 /* Persistence */,
@@ -352,6 +357,7 @@
 				50703B311D7EB736001DAF45 /* ToDoListWindowController.swift */,
 				50703B441D7EF590001DAF45 /* ToDoTableDataSource.swift */,
 				50703B3A1D7EE569001DAF45 /* ToDoListViewModel.swift */,
+				697233282407084100E91FBA /* ToDoPasteboardWriter.swift */,
 				504CDFFD1D8ADF3400D16314 /* KeyboardEventHandler.swift */,
 				50703B3C1D7EE581001DAF45 /* To-Do Item */,
 				504CDFFC1D8ADF2400D16314 /* Components */,
@@ -558,6 +564,7 @@
 				50703AE91D7EACB8001DAF45 /* ToDoDocument.swift in Sources */,
 				502C04801D880C2A0032B7F3 /* DateConverter.swift in Sources */,
 				50703B0A1D7EAD09001DAF45 /* ToDoList.swift in Sources */,
+				6972332E2407679800E91FBA /* ArrayUtil.swift in Sources */,
 				507347901D7FFE8B00ACFD0D /* StreamReader.swift in Sources */,
 				50703B371D7EBC76001DAF45 /* ToDoCellView.swift in Sources */,
 				504CDFE71D8A721D00D16314 /* UndoActionContext.swift in Sources */,
@@ -589,6 +596,7 @@
 				504CDFEE1D8A8E1300D16314 /* SelectionState.swift in Sources */,
 				502C046F1D87D9580032B7F3 /* ToDoListSerializer.swift in Sources */,
 				50703B2C1D7EB2E7001DAF45 /* LoggingMiddleware.swift in Sources */,
+				6972332A240708A500E91FBA /* ToDoPasteboardWriter.swift in Sources */,
 				50703B341D7EB838001DAF45 /* ToDoListPresenter.swift in Sources */,
 				50703B301D7EB60F001DAF45 /* ToDoListState.swift in Sources */,
 				502C04731D87DF040032B7F3 /* ErrorHandling.swift in Sources */,
