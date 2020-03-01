@@ -41,7 +41,7 @@ struct ToDoList {
         }
     }
 
-    mutating func moveItems(from: IndexSet, to: Int) {
+    mutating func moveItems(from: Int, to: Int) {
         items.move(from: from, to: to)
     }
     

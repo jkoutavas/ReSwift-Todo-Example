@@ -56,13 +56,13 @@ extension ToDoTableDataSource: NSTableViewDataSource {
 
         let indexes = items.compactMap{ $0.integer(forType: .tableViewIndex) }
         if !indexes.isEmpty {
-            dispatchAction(MoveTaskAction(from: IndexSet(indexes), to: row))
+            dispatchAction(
+                MoveTaskAction(from: indexes[0], to: row))
             return true
         }
 
         return true
     }
-
 }
 
 extension ToDoTableDataSource: ToDoTableDataSourceType {
