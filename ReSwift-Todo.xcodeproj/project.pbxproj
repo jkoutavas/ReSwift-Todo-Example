@@ -73,7 +73,7 @@
 		507347941D8001A200ACFD0D /* String+ReSwiftTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507347931D8001A200ACFD0D /* String+ReSwiftTodo.swift */; };
 		6972332A240708A500E91FBA /* ToDoPasteboardWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697233282407084100E91FBA /* ToDoPasteboardWriter.swift */; };
 		6972332C24070EDE00E91FBA /* ToDoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972332B24070EDE00E91FBA /* ToDoSerializer.swift */; };
-		6972332E2407679800E91FBA /* ArrayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972332D2407679800E91FBA /* ArrayUtil.swift */; };
+		6972332E2407679800E91FBA /* Array+ReSwiftTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972332D2407679800E91FBA /* Array+ReSwiftTodo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,7 +169,7 @@
 		507347931D8001A200ACFD0D /* String+ReSwiftTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "String+ReSwiftTodo.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		697233282407084100E91FBA /* ToDoPasteboardWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoPasteboardWriter.swift; path = "ReSwift-Todo/ToDoPasteboardWriter.swift"; sourceTree = SOURCE_ROOT; };
 		6972332B24070EDE00E91FBA /* ToDoSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSerializer.swift; sourceTree = "<group>"; };
-		6972332D2407679800E91FBA /* ArrayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayUtil.swift; sourceTree = "<group>"; };
+		6972332D2407679800E91FBA /* Array+ReSwiftTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ReSwiftTodo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +204,6 @@
 		502C04811D880C310032B7F3 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				6972332D2407679800E91FBA /* ArrayUtil.swift */,
 				504CDFE21D8A6F2D00D16314 /* UndoCommand.swift */,
 				502C047E1D880C150032B7F3 /* Time */,
 				50703B4C1D7F13DE001DAF45 /* Persistence */,
@@ -215,6 +214,7 @@
 		504CDFDD1D8A6DA800D16314 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				6972332D2407679800E91FBA /* Array+ReSwiftTodo.swift */,
 				50703B461D7EF83D001DAF45 /* CollectionType+ReSwiftTodo.swift */,
 				507347931D8001A200ACFD0D /* String+ReSwiftTodo.swift */,
 			);
@@ -564,7 +564,7 @@
 				50703AE91D7EACB8001DAF45 /* ToDoDocument.swift in Sources */,
 				502C04801D880C2A0032B7F3 /* DateConverter.swift in Sources */,
 				50703B0A1D7EAD09001DAF45 /* ToDoList.swift in Sources */,
-				6972332E2407679800E91FBA /* ArrayUtil.swift in Sources */,
+				6972332E2407679800E91FBA /* Array+ReSwiftTodo.swift in Sources */,
 				507347901D7FFE8B00ACFD0D /* StreamReader.swift in Sources */,
 				50703B371D7EBC76001DAF45 /* ToDoCellView.swift in Sources */,
 				504CDFE71D8A721D00D16314 /* UndoActionContext.swift in Sources */,
