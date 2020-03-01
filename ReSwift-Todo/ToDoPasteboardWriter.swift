@@ -11,7 +11,6 @@ import Cocoa
 class ToDoPasteboardWriter: NSObject, NSPasteboardWriting {
     var todoViewModel: ToDoViewModel
     var index: Int
-    lazy var toDoSerializer = ToDoSerializer()
     
     init(todoViewModel: ToDoViewModel, at index: Int) {
         self.todoViewModel = todoViewModel
